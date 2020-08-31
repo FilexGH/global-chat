@@ -1,0 +1,32 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #f5f0e1;
+  font-family: "Monda";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-size: cover;
+  background-image: url("./Background/main.jpg");
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+input,
+button {
+  font-family: "Monda";
+}
+
+@font-face {
+  font-family: "Monda";
+  src: url("./Fonts/Monda-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Monda-Bold";
+  src: url("./Fonts/Monda-Bold.ttf");
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

@@ -1,0 +1,39 @@
+.Header {
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.Header > h3 {
+  margin-left: 10px;
+}
+
+.Header > ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.Header > ul > li {
+  padding-right: 5px;
+  padding-left: 5px;
+  height: 60px;
+  width: 70px;
+  line-height: 60px;
+  background-color: rgba(20, 20, 20, 0.9);
+  text-align: center;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.Header > ul > li:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+}
