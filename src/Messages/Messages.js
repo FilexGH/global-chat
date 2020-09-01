@@ -1,4 +1,5 @@
-import firebase from "firebase";
+import * as firebase from "firebase/app";
+import "firebase/firestore";
 import React, { useState, useEffect, useRef } from "react";
 import "./Messages.css";
 import { auth, collection } from "../firebase";
@@ -31,7 +32,7 @@ export default function Messages() {
         ID: Data.length,
         Author: auth.currentUser.displayName,
         Message: sendMessage,
-        Time: firebase.firestore.Timestamp.fromDate(new Date()),
+        Time: firebase.firestore.FieldValue.serverTimestamp(),
       });
     }
   };
@@ -39,7 +40,6 @@ export default function Messages() {
     let unsubscribe = collection
       .orderBy("Time", "asc")
       .onSnapshot((res) => updateMessage(res));
-    console.log(auth.currentUser.displayName);
     return () => {
       unsubscribe();
     };
